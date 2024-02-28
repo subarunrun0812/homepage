@@ -2,7 +2,7 @@ import React from "react"
 import Seo from "../components/seo"
 
 const IndexPage = () => {
-  const Head = () => <Seo title="Home" /> 
+  const Head = () => <Seo title="home" /> 
 
   return (
     <div>
