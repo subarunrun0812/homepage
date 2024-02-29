@@ -2,6 +2,10 @@ import React from "react"
 import Header from "../components/header"
 import {underHeader} from "../utils"
 
+const fullNameStyle = {
+  textAlign: "center",
+}
+
 export default function IndexPage()
 {
   return (
@@ -9,7 +13,7 @@ export default function IndexPage()
     <div>
         <Header />
         <main style={underHeader}>
-          <h1 style={{ textAlign: "center" }}>Sasaki Subaru</h1>
+          <h1 style={fullNameStyle}>Sasaki Subaru</h1>
         </main>
     </div>
   )
