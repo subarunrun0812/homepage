@@ -7,21 +7,13 @@ export default function NotFoundPage() {
       path: "/",
       text: "Home",
     },
-    {
-      path: "/about/",
-      text: "About",
-    },
-    {
-      path: "/contact/",
-      text: "Contact",
-    },
   ];
 
   return (
     <div>
       <h1>404: Not Found</h1>
       <p>
-        迷子になってしまったようです😭 サイトマップから探してみませんか？
+        {"迷子になってしまったようです😭\nホームに戻りましょう!"}
       </p>
       <ul>
         {links.map((link) => (
@@ -31,5 +23,5 @@ export default function NotFoundPage() {
         ))}
       </ul>
     </div>
-  )
+  );
 }
