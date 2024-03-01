@@ -1,27 +1,15 @@
-import React from "react";
-import { Link } from "gatsby";
+import * as React from "react"
 
-export default function NotFoundPage() {
-  const links = [
-    {
-      path: "/",
-      text: "Home",
-    },
-  ];
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
-  return (
-    <div>
-      <h1>404: Not Found</h1>
-      <p>
-        {"迷子になってしまったようです😭\nホームに戻りましょう!"}
-      </p>
-      <ul>
-        {links.map((link) => (
-          <li key={link.path}>
-            <Link to={link.path}>{link.text}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+const NotFoundPage = () => (
+  <Layout>
+    <h1>404: Not Found</h1>
+    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  </Layout>
+)
+
+export const Head = () => <Seo title="404: Not Found" />
+
+export default NotFoundPage
