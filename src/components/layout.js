@@ -32,7 +32,9 @@ const Layout = ({ children }) => {
           padding: `var(--size-gutter)`,
         }}
       >
-        <main>{children}</main>
+        <main>
+            {children}
+        </main>
         <footer
           style={{
             marginTop: `var(--space-5)`,
