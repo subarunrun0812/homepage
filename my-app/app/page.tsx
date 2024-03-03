@@ -2,26 +2,27 @@ import React from 'react';
 import Header from './header';
 import ProfileBanner from './profile';
 
-const mainStyles: React.CSSProperties = {
-  display: 'flex',
+const bodyStyles: React.CSSProperties = {
   minHeight: '100vh',
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: '24px',
   marginTop: '120px' /* ヘッダーの高さ + padding に合わせます */
 };
 
-const Main = ({ children }: { children: React.ReactNode }) => {
-  return <main style={mainStyles}>{children}</main>;
-};
+const mainStyles =
+{
+  padding: '24px'
+}
 
 const Home = () => {
   return (
-    <Main>
+    <main style={mainStyles}>
       <Header />
-      <ProfileBanner />
-    </Main>
+      <body style={bodyStyles}>
+        <ProfileBanner />
+      </body>
+    </main>
   );
 };
 
