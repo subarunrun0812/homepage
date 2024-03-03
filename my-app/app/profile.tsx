@@ -21,7 +21,7 @@ const ProfileBanner = () => {
             <p>
                 2004年に大阪で生まれた
             </p>
-        </div>
+        </div >
     );
 };
 

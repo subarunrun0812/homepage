@@ -17,11 +17,12 @@ const mainStyles =
 
 const Home = () => {
   return (
+
     <main style={mainStyles}>
       <Header />
-      <body style={bodyStyles}>
-        <ProfileBanner />
-      </body>
+      {/* <body style={bodyStyles}> */}
+      <ProfileBanner />
+      {/* </body> */}
     </main>
   );
 };
