@@ -1,11 +1,14 @@
 import type { Config } from "tailwindcss";
+// Tailwind CSS 設定ファイル
 
 const config: Config = {
+  // Tailwindcssで使用可能なファイルパス
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // テーマ設定
   theme: {
     extend: {
       backgroundImage: {
@@ -15,6 +18,8 @@ const config: Config = {
       },
     },
   },
+  // 使用するプラグイン
   plugins: [],
 };
+
 export default config;
