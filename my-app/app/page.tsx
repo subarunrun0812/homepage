@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './header';
+import Button from './button';
 import ProfileBanner from './profile';
 
 const bodyStyles = {
@@ -19,9 +20,10 @@ const Home = () => {
   return (
 
     <main style={mainStyles}>
-      <Header />
+      {/* <Header /> */}
+      <Button />
       {/* <body style={bodyStyles}> */}
-      <ProfileBanner />
+      {/* <ProfileBanner /> */}
       {/* </body> */}
     </main>
   );

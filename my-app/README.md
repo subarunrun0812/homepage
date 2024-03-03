@@ -7,6 +7,7 @@ First, run the development server:
 
 ```bash
 npm install next
+npm install @nextui-org/react
 npm run dev
 # or
 yarn dev
