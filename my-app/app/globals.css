@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0; /* Black color for text */
+  --foreground-rgb: 255, 255, 255; /* Black color for text */
   --background-rgb: 0, 0, 0; /* Black color for background */
 }
 
+/* ユーザーがOSのダークモードを使用している場合、ダークモードの色を設定します。 */
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255; /* White color for text in dark mode */
