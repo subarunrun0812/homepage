@@ -4,9 +4,10 @@ const headerStyles: React.CSSProperties = {
     position: 'fixed' as const,
     display: 'flex',
     fontSize: '1rem',
-    backgroundColor: '#000',
+    backgroundColor: '#999',
     top: '0px',
-    paddingTop: '30px',
+    paddingTop: '60px',
+    alignItems: 'end',
     width: '100%',
     zIndex: 100,
 };
@@ -14,14 +15,13 @@ const headerStyles: React.CSSProperties = {
 const Header = () => {
     return (
         <header style={headerStyles}>
-            <h1 style={{ position: 'absolute', left: '10px' }}>Subaru.com</h1>
-            <h1 style={{ position: 'absolute', right: '10px' }}>
+            <h1 style={{ position: 'absolute', left: '10px' }}>Subaru</h1>
+            <h1 style={{ position: 'absolute', right: '100px' }}>
                 <a href='/'>home</a>
             </h1>
         </header>
     );
 };
-
 
 
 export default Header;

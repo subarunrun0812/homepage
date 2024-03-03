@@ -19,7 +19,7 @@ const ProfileBanner = () => {
                 Sasaki Subaru
             </h1>
             <p>
-                2004年に大阪で生まれたんや
+                2004年に大阪で生まれた
             </p>
         </div>
     );

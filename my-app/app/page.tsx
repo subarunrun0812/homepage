@@ -7,12 +7,12 @@ const bodyStyles: React.CSSProperties = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'space-between',
-  marginTop: '120px' /* ヘッダーの高さ + padding に合わせます */
+  marginTop: '80px' /* ヘッダーの高さ + padding に合わせます */
 };
 
 const mainStyles =
 {
-  padding: '24px'
+  padding: '0px'
 }
 
 const Home = () => {
