@@ -1,7 +1,8 @@
 import React from 'react';
 
-const headerStyles: React.CSSProperties = {
-    position: 'fixed' as const,
+
+const headerStyles = {
+    position: 'fixed',
     display: 'flex',
     fontSize: '1rem',
     backgroundColor: '#999',
@@ -27,10 +28,3 @@ const Header = () => {
 
 
 export default Header;
-
-{/* <a href="/">
-    Home
-</a>
-<a href="/about">
-    About
-</a> */}
