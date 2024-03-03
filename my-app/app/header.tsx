@@ -6,19 +6,21 @@ const headerStyles: React.CSSProperties = {
     fontSize: '1rem',
     backgroundColor: '#999',
     top: '0px',
-    paddingTop: '60px',
-    alignItems: 'end',
+    alignItems: 'center',
     width: '100%',
+    height: '50px', // ヘッダーの高さ
     zIndex: 100,
 };
 
 const Header = () => {
     return (
         <header style={headerStyles}>
-            <h1 style={{ position: 'absolute', left: '10px' }}>Subaru</h1>
-            <h1 style={{ position: 'absolute', right: '100px' }}>
-                <a href='/'>home</a>
-            </h1>
+            <div style={{}} >
+                <h1 style={{ position: 'absolute', left: '10px' }}>Subaru</h1>
+                <h1 style={{ position: 'absolute', right: '100px' }}>
+                    <a href='/'>home</a>
+                </h1>
+            </div>
         </header>
     );
 };
