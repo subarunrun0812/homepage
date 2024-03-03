@@ -21,6 +21,7 @@ const Home = () => {
   return (
 
     <main>
+      <Header />
       <Button />
     </main>
   );

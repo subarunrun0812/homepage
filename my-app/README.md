@@ -7,7 +7,6 @@ First, run the development server:
 
 ```bash
 npm install next
-npm install @nextui-org/react
 npm run dev
 # or
 yarn dev
@@ -16,12 +15,20 @@ pnpm dev
 # or
 bun dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+# NextUI
+```bash
+npm install @nextui-org/react
+```
+[NextUI Installation](https://nextui.org/docs/guide/installation#:~:text=the%20following%20steps%3A-,Global%20Installation,-The%20easiest%20way)
+[Next.js に NextUI を導入する](https://zenn.dev/tataya/articles/a8198e283bf1a4)
+
+
 
 ## Learn More
 
