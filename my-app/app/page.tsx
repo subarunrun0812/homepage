@@ -16,18 +16,15 @@ const mainStyles =
   padding: '0px'
 }
 
-//TODO: ボタンのUIが表示されない。
-const Home = () => {
+export default function Home() {
   return (
 
     <main>
       <Header />
-      <Button />
     </main>
   );
 };
 
-export default Home;
 // const Home = () => {
 //   return (
 

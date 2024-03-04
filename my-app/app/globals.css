@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255; /* Black color for text */
-  --background-rgb: 0, 0, 0; /* Black color for background */
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
 }
 
 /* ユーザーがOSのダークモードを使用している場合、ダークモードの色を設定します。 */
@@ -16,7 +16,6 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-rgb)); /* Set background color to black using --background-rgb */
 }
 
 @layer utilities {
