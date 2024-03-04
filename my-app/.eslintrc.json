@@ -1,5 +1,0 @@
-// JavaScript コードの静的解析を行うための 設定ファイル
-
-{
-  "extends": "next/core-web-vitals"
-}
