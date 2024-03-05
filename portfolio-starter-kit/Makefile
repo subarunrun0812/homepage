@@ -4,4 +4,7 @@ start:
 	fi
 	npm run dev
 
-PHONY: start
+create:
+	npm install next
+
+.PHONY: start create
