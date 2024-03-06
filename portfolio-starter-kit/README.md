@@ -33,9 +33,13 @@ yarn create next-app --example blog my-blog
 ```
 
 プロジェクトの実行
-```baash
-npm run dev
+```bash
+make
 ```
 
-
 Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+
+# Blog
+注意事項:
+NextraはMarkdownファイルのfrontmatterにあるtitleフィールドを優先的にページタイトルとします。
+そのため、H1タグをMarkdown本文に含めると無視されます。
