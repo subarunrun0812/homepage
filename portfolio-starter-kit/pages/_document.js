@@ -1,3 +1,5 @@
+// <head>内のメタデータや基本レイアウトなど、Next.jsアプリケーションのベースとなるHTMLドキュメント構造をカスタマイズします
+
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
