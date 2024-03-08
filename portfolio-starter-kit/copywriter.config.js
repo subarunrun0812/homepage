@@ -1,6 +1,5 @@
 const YEAR = new Date().getFullYear()
 
-// このコンポーネントをデフォルトでエクスポートする
 export default {
   // JSXレンダリング結果をfooterに代入
   footer: (

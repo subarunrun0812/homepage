@@ -1,65 +1,65 @@
+/* ------------------------------------------
+      Font Loading (Inter var)
+------------------------------------------ */ 
+
 @font-face {
-  font-family: 'Inter var';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: block;
-  src: url(/fonts/Inter-roman.latin.var.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Inter var';
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: block;
-  src: url(/fonts/Inter-italic.latin.var.woff2) format('woff2');
-  font-named-instance: 'Italic';
+  font-family: 'Inter var';  /* フォントファミリ名を指定 */
+  font-style: normal;        /* 通常のフォントスタイル */
+  font-weight: 100 900;      /* フォントウェイトは100から900までの可変フォント */
+  font-display: block;       /* 表示をブロックレベルにしフォントの読み込みを最適化 */ 
+  src: url(/fonts/Inter-roman.latin.var.woff2) format('woff2'); /* 可変フォントファイルの読み込み - roman (非斜体) */
 }
 
+@font-face {
+  font-family: 'Inter var';  /* フォントファミリ名を指定 */
+  font-style: italic;        /* 斜体スタイル */
+  font-weight: 100 900;      /* フォントウェイトは100から900までの可変フォント */ 
+  font-display: block; 
+  src: url(/fonts/Inter-italic.latin.var.woff2) format('woff2'); /* 可変フォントファイル - italic (斜体) */
+  font-named-instance: 'Italic';  /* このフォントを'Italic'という名前で登録 */
+}
+
+
+/* ------------------------------------------
+    Base Styles 
+------------------------------------------ */ 
 body {
-  font-family: 'Inter var', system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: subpixel-antialiased;
-  font-feature-settings: 'case' 1, 'cpsp' 1, 'dlig' 1, 'cv01' 1, 'cv02',
-    'cv03' 1, 'cv04' 1;
-  font-variation-settings: 'wght' 450;
-  font-variant: common-ligatures contextual;
-  letter-spacing: -0.02em;
-}
-b,
-strong,
-h3,
-h4,
-h5,
-h6 {
-  font-variation-settings: 'wght' 650;
-}
-h1 {
-  font-variation-settings: 'wght' 850;
-}
-h2 {
-  font-variation-settings: 'wght' 750;
+  font-family: 'Inter var', system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';  /* 汎用的に使用できるフォントスタック */
+  -webkit-font-smoothing: subpixel-antialiased;   /* テキストの見栄えがよくなるようレンダリング調整 (Webkit) */ 
+  font-feature-settings: 'case' 1, 'cpsp' 1, 'dlig' 1, 'cv01' 1, 'cv02', 
+    'cv03' 1, 'cv04' 1; /* OpenTypeフォントの機能を有効化 */ 
+  font-variation-settings: 'wght' 450; /* 初期状態のフォントウェイト */ 
+  font-variant: common-ligatures contextual; /* リガチャやコンテキストによる代替文字を有効化 */ 
+  letter-spacing: -0.02em;   /*  文字間隔を狭く */
 }
 
-@media screen and (min-device-pixel-ratio: 1.5),
-  screen and (min-resolution: 1.5dppx) {
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+b, strong, h3, h4, h5, h6 {
+   font-variation-settings: 'wght' 650; /* 太字要素はフォントウェイトを少し太く */
+}
+h1 { font-variation-settings: 'wght' 850; /* H1はより太いウェイト */ }
+h2 { font-variation-settings: 'wght' 750; /* H2は中間的な太さ */ }
+
+
+/* ------------------------------------------
+  Retina Display / High DPI Optimization
+------------------------------------------ */ 
+
+@media screen and (min-device-pixel-ratio: 1.5),  screen and (min-resolution: 1.5dppx) {
+  body { 
+    -webkit-font-smoothing: antialiased; /* WebKitブラウザでのアンチエイリアシング */ 
+    -moz-osx-font-smoothing: grayscale; /* FireFoxでのアンチエイリアシング */ 
   }
 }
 
-details summary {
-  cursor: pointer;
-}
+/* ------------------------------------------
+        Additional Styling Rules
+------------------------------------------ */ 
+details summary { cursor: pointer; } /* details要素をクリックできるように */
 
-img.next-image {
-  margin: 0;
-}
+img.next-image { margin: 0; } /* Next.js の Image コンポーネントの余白をリセット */
 
-.prose a {
-  color: #0074de;
-}
+.prose a { color: #0074de; } /* 特定の文脈でのリンクの色 */
 
-.nav-line .nav-link {
-  color: #69778c;
-}
+.nav-line .nav-link { color: #69778c; } /* 特定のナビゲーション用のリンクの色 */

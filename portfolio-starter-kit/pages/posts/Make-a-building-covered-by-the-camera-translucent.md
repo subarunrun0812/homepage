@@ -2,7 +2,7 @@
 title: (Unity) カメラに被った建物を半透明化する
 date: 2023/6/27
 description: Confirm markdown display
-tag: Unity C#
+tag: Unity, C#
 author: You
 ---
 
