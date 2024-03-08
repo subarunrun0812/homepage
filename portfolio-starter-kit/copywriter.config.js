@@ -1,6 +1,8 @@
 const YEAR = new Date().getFullYear()
 
+// このコンポーネントをデフォルトでエクスポートする
 export default {
+  // JSXレンダリング結果をfooterに代入
   footer: (
     <small style={{ display: 'block', marginTop: '8rem' }}>
       <time>{YEAR}</time> © Sasaki Subaru.
