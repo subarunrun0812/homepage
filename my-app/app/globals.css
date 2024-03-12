@@ -17,6 +17,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb)); /* Set background color to black using --background-rgb */
+  min-height: 100vh;
 }
 
 @layer utilities {
