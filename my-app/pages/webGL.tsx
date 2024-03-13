@@ -1,52 +1,64 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
+/* In your CSS file */
+const canvasStyle = {
+  display: 'flex',
+  width: '100%', 
+  height: '100vh',
+  // align-items: 'center',
+  // justify-content: 'center',
+  transform: 'scale(0.5)',
+};
+
 const App = () => {
   const canvasRef = useRef();
 
   useEffect(() => {
     const canvas = canvasRef.current;
 
-    // Only initialize Three.js and set initial size if we're in the browser
-    if (typeof window !== 'undefined') { 
-      const renderer = new THREE.WebGLRenderer({ canvas });
+    // Renderer
+    const renderer = new THREE.WebGLRenderer({ canvas });
 
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(
-        75,
-        window.innerWidth / window.innerHeight,
-        0.1,
-        1000
-      );
+    // Scene
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color('lightblue'); // Set background color
 
-      // ... rest of your Three.js code
+    // Camera
+    const camera = new THREE.PerspectiveCamera(
+      75, // FOV
+      canvas.width / canvas.height, // Aspect ratio
+      0.1, // Near clipping plane
+      1000 // Far clipping plane
+    );
+    camera.position.z = 5; 
 
-      // Function to handle resizing:
-      const handleResize = () => {
-        if (renderer && camera) {
-          camera.aspect = window.innerWidth / window.innerHeight;
-          camera.updateProjectionMatrix();
-          renderer.setSize(window.innerWidth, window.innerHeight);
-        }
-      };
+    // Geometry (Box)
+    const geometry = new THREE.BoxGeometry(1, 1, 1);
 
-      // Add event listener for resizing 
-      window.addEventListener('resize', handleResize);
+    // Material 
+    const material = new THREE.MeshBasicMaterial({ color: 0xff0000 }); // Red
 
-      // Call handleResize initially
-      handleResize(); 
+    // Mesh (Combine geometry + material)
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
 
-      // Cleanup listeners on unmount
-      return () => {
-        renderer.dispose();
-        window.removeEventListener('resize', handleResize);
-      };
-    }
+    // Animation loop
+    const animate = () => {
+      requestAnimationFrame(animate);
+
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
+
+      renderer.render(scene, camera);
+    };
+
+    animate();
   }, []);
 
   return (
-    <div>
-      <canvas ref={canvasRef} /> {/* No initial width/height */}
+    <div style={canvasStyle}>
+      <canvas ref={canvasRef} /> 
     </div>
   );
 };
