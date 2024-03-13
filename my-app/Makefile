@@ -1,6 +1,7 @@
 start:
 	@if [ ! -d "node_modules" ]; then \
 		npm install next; \
+		npm install three; \
 	fi
 	npm run dev
 
