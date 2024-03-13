@@ -19,7 +19,7 @@ const ProfileBanner = () => {
                 Sasaki Subaru
             </h1>
             <p>
-                2004年に大阪で生まれた
+                I'm 19 years old.
             </p>
         </div >
     );
