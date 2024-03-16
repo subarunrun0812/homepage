@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from './header';
-import Button from './button';
 import ProfileBanner from './profile';
 
 const bodyStyles = {
@@ -20,9 +18,10 @@ const Home = () => {
   return (
 
     <main>
-      <Header />
       <div className=" min-height: 100vh padding-bottom: 30cm">
-        <Button />
+        <h1>
+          Sasaki Subaru Profile
+        </h1>
       </div>
     </main>
   );
