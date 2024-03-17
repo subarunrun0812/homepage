@@ -1,12 +1,13 @@
 start:
 	@if [ ! -d "node_modules" ]; then \
+		npm install; \
 		npm install next; \
 		npm install three; \
 	fi
 	npm run dev
 
 clean:
-	rm -rf node_modules .next
+	rm -rf node_modules .next package-lock.json
 
 re: clean start
 
