@@ -1,5 +1,6 @@
 import React from 'react';
 import ProfileBanner from './profile';
+import Link from 'next/link';
 
 const bodyStyles = {
   minHeight: '100vh',
@@ -22,6 +23,9 @@ const Home = () => {
         <h1>
           Sasaki Subaru Profile
         </h1>
+        <Link href="/mdx">
+          blog
+        </Link>
       </div>
     </main>
   );
