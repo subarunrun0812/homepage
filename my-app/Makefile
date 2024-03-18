@@ -3,6 +3,7 @@ start:
 		npm install; \
 		npm install next; \
 		npm install three; \
+		npm install remark rehype; \
 	fi
 	npm run dev
 
