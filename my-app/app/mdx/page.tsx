@@ -1,10 +1,10 @@
-import Page1 from "../../mdx/page.mdx";
-import Page2 from "../../mdx/page2.mdx";
+import Page1 from "../../public/mdx/page.mdx";
+import Page2 from "../../public/mdx/page2.mdx";
 
  // syntax hightlight用 CSS
  import "prismjs/themes/prism-tomorrow.css";
 
-export default async function Page() {
+export default async function Blog() {
   return (
     <article>
       <Page1 />
