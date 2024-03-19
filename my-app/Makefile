@@ -1,9 +1,10 @@
 start:
-	@if [ ! -d "node_modules" ]; then \
+	if [ ! -d "node_modules" ]; then \
 		npm install; \
 		npm install next; \
 		npm install three; \
 		npm install remark rehype; \
+		npm install next-mdx-remote; \
 	fi
 	npm run dev
 
